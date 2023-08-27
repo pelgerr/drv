@@ -18,7 +18,6 @@ If you set up your projects using \`drv setup\` you should be all set.
 "
 
 INSTALL_DIR="$HOME/.drv/versions"
-ENV_CONFIG="$HOME/.drv/versions/env_config"
 GIT_IGNORE=".dragonruby\nbuilds\ndocs\ninclude\nsamples\nCHANGELOG*\nconsole-logo.png\nctags*\ndragonruby*\neula.txt\nffmpeg\nfont.ttf\nlogs\nmygame-template\nopen-source-licenses.txt\ntmp\nVERSION.txt"
 
 VERSIONS=()
@@ -149,7 +148,6 @@ function drv__setup()
   drv__use_version $VERSION
 
   cp -r $DRAGON_RUBY_PATH/{.dragonruby,open-source-licenses.txt,CHANGELOG-CURR.txt,CHANGELOG-PREV.txt,console-logo.png,dragonruby-controller.png,dragonruby.png,font.ttf} .
-  cp -r $ENV_CONFIG/.solargraph.yml .
   echo -e $GIT_IGNORE > .gitignore
   echo $VERSION >> .drv
 
