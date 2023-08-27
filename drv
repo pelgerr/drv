@@ -137,7 +137,11 @@ function drv__setup()
   read -p "Do you want to continue (yes)? " PROCEED
   [[ "$PROCEED" != "yes" ]] && return 0
 
-  mkdir -p $DIR/mygame && cd $DIR
+  mkdir -p $DIR/mygame
+  mkdir tmp && git clone git@github.com:pelgerr/scale.git tmp
+  cp -r tmp/* $DIR/mygame
+  rm -rf tmp
+  cd $DIR
   which git && git init .
 
   drv__use_version $VERSION
