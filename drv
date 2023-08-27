@@ -142,7 +142,7 @@ function drv__setup()
 
   drv__use_version $VERSION
 
-  cp -r $DRAGON_RUBY_PATH/{.dragonruby,open-source-licenses.txt,CHANGELOG-CURR.txt,CHANGELOG-PREV.txt,console-logo.png,dragonruby-controller.png,dragonruby.png} .
+  cp -r $DRAGON_RUBY_PATH/{.dragonruby,open-source-licenses.txt,CHANGELOG-CURR.txt,CHANGELOG-PREV.txt,console-logo.png,dragonruby-controller.png,dragonruby.png,font.ttf} .
   echo -e $GIT_IGNORE > .gitignore
   echo $VERSION >> .drv
 
